@@ -75,10 +75,10 @@ body {
 
 .ind-welcome-text {
     color: var(--ind-text-gray);
-    font-size: 1rem;
+    font-size: 0.95rem; /* Un poco más pequeño para que quepa bien en la tarjeta */
     line-height: 1.6;
-    max-width: 520px;
-    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 25px; /* Espacio antes de los inputs */
 }
 
 /* Campos de entrada estándar */
