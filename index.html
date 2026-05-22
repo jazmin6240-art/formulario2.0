@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Inducción</title>
+    <!-- Tipografía Corporativa y Moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ind-form-wrapper">
+        <!-- ENCABEZADO PRINCIPAL -->
+        <header class="ind-header-block">
+            <h1 class="ind-main-title">Plan de Inducción</h1>
+            <p class="ind-welcome-text">Bienvenido(a) a nuestro equipo. Queremos conocer tu experiencia durante el proceso de inducción para seguir mejorando.</p>
+        </header>
+
+        <!-- PANTALLA 1: INICIO DE SESIÓN SIMPLE -->
+        <section id="ind-login-pane" class="ind-core-card ind-view-active">
+            <div class="ind-field-group">
+                <label for="ind-user-name" class="ind-field-label">Nombre completo *</label>
+                <input type="text" id="ind-user-name" class="ind-global-input" placeholder="Escribe tu nombre aquí" required>
+            </div>
+            <div class="ind-field-group">
+                <label for="ind-user-role" class="ind-field-label">Cargo o área</label>
+                <input type="text" id="ind-user-role" class="ind-global-input" placeholder="Escribe tu cargo o área">
+            </div>
+            <button type="button" id="ind-btn-login" class="ind-btn-action">Ingresar</button>
+        </section>
+
+        <!-- PANTALLA 2: FORMULARIO DE PREGUNTAS OFICIALES -->
+        <!-- NOTA PARA FORMSUBMIT: Si decides usar la opción de correo directo, 
+             cambia la etiqueta de abajo por: <form id="ind-questions-pane" class="ind-core-card ind-view-hidden" action="https://formsubmit.co/tu_correo@empresa.com" method="POST"> -->
+        <form id="ind-questions-pane" class="ind-core-card ind-view-hidden">
+            
+            <!-- Campos ocultos requeridos si se usa la opción de FormSubmit -->
+            <input type="hidden" name="Colaborador" id="ind-hidden-name">
+            <input type="hidden" name="Cargo_Area" id="ind-hidden-role">
+
+            <!-- Pregunta 1 -->
+            <div class="ind-question-container">
+                <label class="ind-question-text">1. ¿Qué fue lo que más te gustó del proceso de inducción?</label>
+                <textarea name="gusto_proceso" class="ind-global-textarea" placeholder="Escribe tu respuesta aquí..." required></textarea>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="ind-question-container">
+                <label class="ind-question-text">2. ¿La información brindada fue clara y fácil de entender?</label>
+                <textarea name="claridad_info" class="ind-global-textarea" placeholder="Escribe tu respuesta aquí..." required></textarea>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="ind-question-container">
+                <label class="ind-question-text">3. ¿Qué tema consideras que debería explicarse con más profundidad?</label>
+                <textarea name="profundizar_tema" class="ind-global-textarea" placeholder="Escribe tu respuesta aquí..." required></textarea>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="ind-question-container">
+                <label class="ind-question-text">4. ¿Cómo calificarías la atención y acompañamiento recibido?</label>
+                <textarea name="calificacion_atencion" class="ind-global-textarea" placeholder="Escribe tu respuesta aquí..." required></textarea>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="ind-question-container">
+                <label class="ind-question-text">5. ¿Te sentiste bienvenido(a) por el equipo de trabajo?</label>
+                <textarea name="bienvenida_equipo" class="ind-global-textarea" placeholder="Escribe tu respuesta aquí..." required></textarea>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="ind-question-container">
+                <label class="ind-question-text">6. ¿Qué sugerencias darías para mejorar el proceso de inducción?</label>
+                <textarea name="sugerencias" class="ind-global-textarea" placeholder="Escribe tu respuesta aquí..." required></textarea>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" id="ind-btn-submit" class="ind-btn-action">Enviar respuestas</button>
+        </form>
+
+        <!-- PANTALLA 3: TARJETA DE AGRADECIMIENTO FINAL -->
+        <section id="ind-success-pane" class="ind-core-card ind-success-layout ind-view-hidden">
+            <div class="ind-success-icon">✓</div>
+            <h2 class="ind-success-title">Gracias por completar el formulario</h2>
+            <p class="ind-success-description">Tus respuestas fueron enviadas correctamente y nos ayudarán a mejorar el proceso de inducción.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
